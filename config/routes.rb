@@ -1,4 +1,5 @@
 EmailScrapping::Application.routes.draw do
+  post 'tmp_emails/save' => 'tmp_emails#save'
   resources :checkouts, only: [:show, :new, :create]
   root 'checkouts#new'
   # The priority is based upon order of creation: first created -> highest priority.

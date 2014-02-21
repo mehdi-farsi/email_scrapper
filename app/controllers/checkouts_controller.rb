@@ -28,6 +28,8 @@ class CheckoutsController < ApplicationController
 
     respond_to do |format|
       if @checkout.save
+        tmp_email = TmpEmail.find_by_email(checkout_params[:email])
+        tmp_email.delete unless tmp_email.nil?
         format.html { redirect_to @checkout, notice: 'Checkout was successfully created.' }
         format.json { render action: 'show', status: :created, location: @checkout }
       else
