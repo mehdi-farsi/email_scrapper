@@ -1,7 +1,7 @@
 Email Scrapper
 ==============
 
-To grab and store emails of clients as they fill a checkout form
+To grab and store emails of clients while they fill in a checkout form
 
 ####Specs:
 
